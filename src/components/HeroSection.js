@@ -19,7 +19,7 @@ const HeroSection = () => {
         <p className="text-lg text-white animate-pulse">Web Developer and Graphics Designer</p>
         <div className="mt-auto mb-6">
           <svg
-            className="animate-bounce w-6 h-6 text-gray-600"
+            className="animate-bounce w-6 h-6 text-white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

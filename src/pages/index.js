@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <div>
       <HeroSection></HeroSection>
-      <Card image="bg.jpeg"></Card>
-      <Card image="bg1.jpeg"></Card>
-      <Projects></Projects>
+      <Card title="Web Development "></Card>
+      <Card title="Graphics Design"></Card>
+      {/* <Projects></Projects> */}
       
     </div>
   )
