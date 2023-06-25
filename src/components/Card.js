@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Card = (props) => {
-  const [image, setImage] = useState('/bg1.jpeg');
+  const [image, setImage] = useState("/Rate.png");
 
   const handleClick = () => {
-    const imageList = [
-        '/bg.jpeg',
-        '/bg1.jpeg',
-      '/hero1.png',
-    ];
-  
+    const imageList = ["/Rate.png", "/h.jpg"];
+
     const currentIndex = imageList.indexOf(image);
     const nextIndex = (currentIndex + 1) % imageList.length;
     const newImage = imageList[nextIndex];
@@ -17,20 +13,19 @@ const Card = (props) => {
   };
 
   return (
-    <div
-      className="relative flex items-center justify-center h-screen cursor-pointer "
-      onClick={handleClick}
-    >
-      <div className="absolute inset-0 bg-cover bg-center my-32 mx-32  transition-transform duration-300 hover:scale-105">
-        <img
-          className="w-full h-full object-cover"
-          src={image}
-          alt="Background"
-        />
-      </div>
-      <div className="absolute left-0 ml-8 text-white bg-black/60 p-4 rounded-md transition-transform duration-300  hover:scale-125">
-        <h1 className="text-2xl font-bold mb-4">{props.title} &rarr;</h1>
-        {/* <p className="text-gray-300">Card Description</p> */}
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 px-3">
+      <div className="relative my-16 max-w-4xl sm:h-[70vh]   w-full rounded-lg overflow-hidden shadow-lg bg-white">
+        <div
+          className="bg-cover bg-center h-96 sm:h-[60vh] hover:opacity-80"
+          style={{ backgroundImage: `url(${image})` }}
+          onClick={handleClick}
+        ></div>
+        <div className="px-6 py-4 bg-black">
+          <div className="mb-2">
+            <h1 className="text-2xl font-bold text-white">{props.title} &rarr;</h1>
+          </div>
+          {/* <p className="text-gray-700">Card Description</p> */}
+        </div>
       </div>
     </div>
   );
