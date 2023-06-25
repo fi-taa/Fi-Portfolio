@@ -16,7 +16,7 @@ const HeroSection = () => {
           <img src='h2.jpg' className='h-3/4 md:max-w-full md:max-h-full'/>
         </div>
         <svg
-          className="absolute bottom-0 left-1/2 transform-translate-x-1/2 mb-8 animate-bounce w-6 h-6 text-white cursor-pointer bg-slate-700/80 rounded-full"
+          className="absolute bottom-0 left-1/2 transform-translate-x-1/2 mb-8 animate-bounce w-10 h-10 text-white cursor-pointer bg-slate-700/80 rounded-full p-2"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
