@@ -4,7 +4,7 @@ const Card = (props) => {
   const [image, setImage] = useState("/Rate.png");
 
   const handleClick = () => {
-    const imageList = ["/Rate.png", "/h.jpg"];
+    const imageList = ["/Rate.png", "/NewsLetter.png"];
 
     const currentIndex = imageList.indexOf(image);
     const nextIndex = (currentIndex + 1) % imageList.length;
