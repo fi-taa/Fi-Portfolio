@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
-import { Card, Image } from 'react-bootstrap';
+import React, { useState } from "react";
 
-const Card2 = ({ projects }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const Card = (props) => {
+  const [image, setImage] = useState("/Rate.png");
 
   const handleClick = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    const imageList = ["/h2.jpg", "/JavaBlend.jpg"];
+
+    const currentIndex = imageList.indexOf(image);
+    const nextIndex = (currentIndex + 1) % imageList.length;
+    const newImage = imageList[nextIndex];
+    setImage(newImage);
   };
 
-  if (!projects || projects.length === 0) {
-    // Handle the case where no projects are available
-    return null;
-  }
-
-  const activeProject = projects[activeIndex];
-
   return (
-    <div className="flex justify-center items-center">
-      <Card className="max-w-lg">
-        <Card.Body>
-          <Card.Title className="text-2xl font-bold mb-4">
-            {activeProject.title}
-          </Card.Title>
-          <Image
-            src={activeProject.image}
-            alt={activeProject.title}
-            className="w-full"
-          />
-        </Card.Body>
-        <Card.Footer>
-          <button
-            onClick={handleClick}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Next Project
-          </button>
-        </Card.Footer>
-      </Card>
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 px-3">
+      <div className="relative my-16 max-w-4xl sm:h-[70vh]   w-full rounded-lg overflow-hidden shadow-lg bg-white">
+        <div
+          className="bg-cover bg-center h-96 sm:h-[60vh] hover:opacity-80"
+          style={{ backgroundImage: `url(${image})` }}
+          onClick={handleClick}
+        ></div>
+        <div className="px-6 py-4 bg-black">
+          <div className="mb-2">
+            <h1 className="text-2xl font-bold text-white">{props.title} &rarr;</h1>
+          </div>
+          {/* <p className="text-gray-700">Card Description</p> */}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Card2;
+export default Card;
