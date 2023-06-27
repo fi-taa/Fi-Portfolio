@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const Card = (props) => {
-  const [image, setImage] = useState("/Rate.png");
+  const [image, setImage] = useState("/h2.png");
 
   const handleClick = () => {
-    const imageList = ["/h2.jpg", "/JavaBlend.jpg"];
+    const imageList = ["/h2.jpg", "/JavaBlend.png"];
 
     const currentIndex = imageList.indexOf(image);
     const nextIndex = (currentIndex + 1) % imageList.length;

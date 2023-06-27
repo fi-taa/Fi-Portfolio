@@ -12,10 +12,10 @@ export default function Home() {
 
   return (
     <div>
-      {/* <HeroSection></HeroSection>
+      <HeroSection></HeroSection>
       <Card title="Web Development" />
-      <Card2 title="Graphics Design" /> */}
-        <ProjectPreviewPage/>
+      <Card2 title="Graphics Design" />
+        {/* <ProjecPreviewPage/> */}
     </div>
   )
 }
