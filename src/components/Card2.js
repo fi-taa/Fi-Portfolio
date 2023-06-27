@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Card = (props) => {
-  const [image, setImage] = useState("/h2.png");
+  const [image, setImage] = useState("/h2.jpg");
 
   const handleClick = () => {
     const imageList = ["/h2.jpg", "/JavaBlend.png"];

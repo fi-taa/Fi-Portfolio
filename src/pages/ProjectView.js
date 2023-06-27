@@ -4,33 +4,37 @@ import { useState, useEffect } from "react";
 // Dummy project data
 const projects = [
     {id:0,
-    title: "Welcome",
-    description:"welcome to my project site",
+    title: "Projects  🔻",
+    description:"Welcome to the Projects page for Frontend Developers! Explore a diverse collection of curated projects to enhance your skills and ignite your passion for frontend development. From responsive layouts to stunning visual effects, find endless possibilities to challenge and inspire you. Happy coding!",
 website:"https://fitaa.vercel.app",
 github:"https://github.com/fi-taa"},
   {
     id: 1,
-    title: "Project 1",
+    title: "Fi-Portifolio",
     description:
-      "This is the description for Project 1. This is the description for Project 1. It can be a long description that spans multiple lines. It can be a long description that spans multiple lines.",
-    website: "https://project1.com",
-    github: "https://github.com/project1",
+      "Welcome to 'Fi-portfolio' - a showcase of my work! This project highlights my skills and expertise as a frontend developer. Explore a collection of meticulously crafted web pages, beautifully designed user interfaces, and seamlessly interactive features. Dive into the world of 'Fi-portfolio' and witness the blend of creativity, innovation, and technical prowess. Experience the power of modern web development brought to life through this unique project.",
+    
+   website: "https://github.com/fi-taa/fi-portfolio",
+   github: "https://github.com/fi-taa/fi-portfolio",
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "Rating Component",
     description:
-      "This is the description for Project 2. It can be a long description that spans multiple lines.",
-    website: "https://project2.com",
-    github: "https://github.com/project2",
+      "Discover our simple and intuitive Rating Page! Easily collect user feedback and ratings with a streamlined interface. Effortlessly gather valuable insights to improve your products or services. Start gathering feedback today and make informed decisions.",
+    website: "https://github.com/fi-taa/Rating/blob/master/src/components",
+    github: "https://github.com/fi-taa/Rating/blob/master/src/components/Rating.jsx",
+
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "Newsletter Component",
     description:
-      "This is the description for Project 3. It can be a long description that spans multiple lines.",
-    website: "https://project3.com",
-    github: "https://github.com/project3",
+      "Introducing our Interactive Newsletter Component! Engage your audience with captivating newsletters that go beyond plain text. Seamlessly integrate interactive elements like videos, images, and interactive buttons to create a truly immersive experience. Boost reader engagement and drive meaningful interactions. Elevate your newsletters to the next level with our user-friendly component.",
+    
+    website: "https://github.com/fi-taa/Rating/blob/master/src/components/",
+    github: "https://github.com/fi-taa/Rating/blob/master/src/components/NewsLetter.jsx",
+
   },
 ];
 
@@ -63,7 +67,7 @@ const ProjectPreviewPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800">
-      <header className="flex items-center justify-between w-full px-4 py-3 ">
+      <header className="flex items-center justify-between w-full px-4 py-3">
         <Link href="/">
             <img src="/h2.jpg" width={50} height={50} className="rounded drop-shadow-md hover:scale-125"/>
         </Link>

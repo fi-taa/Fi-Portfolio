@@ -22,7 +22,7 @@ const Card = (props) => {
         ></div>
         <div className="px-6 py-4 bg-black">
           <div className="mb-2">
-            <h1 className="text-2xl font-bold text-white">{props.title} &rarr;</h1>
+            <h1 className="text-2xl font-bold text-white"> <a href="/ProjectView"> {props.title} &rarr;</a></h1>
           </div>
           {/* <p className="text-gray-700">Card Description</p> */}
         </div>

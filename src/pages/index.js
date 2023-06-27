@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import HeroSection from '@/components/HeroSection'
 import Card2 from '@/components/Card2'
 import Card from '@/components/Card'
-import ProjectPreviewPage from '@/components/ProjectView'
+import ProjectPreviewPage from '@/pages/ProjectView'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
