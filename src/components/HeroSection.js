@@ -1,38 +1,62 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaGithub, FaLinkedinIn, FaMailBulk, FaTelegram } from 'react-icons/fa';
 
-const HeroSection = () => {
-  const handleClick = () => {
-    // Scroll to the next section/page
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-  };
-
+const Hero = () => {
   return (
-    <>
-      <div className='h-screen flex flex-col md:flex-row relative'>
-        <div className='h-1/2 md:h-full w-full flex items-center justify-center'>
-          <img src='h1.jpg' className='max-w-full max-h-full'/>
+    <div id='home' className='w-full h-[88vh] text-center bg-black text-white '>
+      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center  flex-col-reverse sm:flex-row'>
+        <div>
+          <p className='uppercase text-sm tracking-widest font-extralight'>
+             BUILD TOGETHER
+          </p>
+          <h1 className='py-4 text-4xl font-bold'>
+            Hi, I&#39;m <span className='text-[#3f35ff] '> Fita</span>
+          </h1>
+          <h1 className='py-2 font-serif text-blue-400'>A Front-End Web Developer</h1>
+          <p className='py-4  sm:max-w-[70%] m-auto font-thin'>
+            I’m focused on building responsive front-end web applications
+            integrating back-end technologies.
+          </p>
+          <div className='flex items-center justify-between max-w-[330px] m-auto py-4 '>
+            <a
+              href='https://t.me/wecan_1'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='rounded-full  bg-white text-black p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <FaTelegram />
+              </div>
+            </a>
+            <a
+              href='https://github.com/fi-taa'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='rounded-full  bg-white text-black p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <FaGithub />
+              </div>
+            </a>
+            <Link href='/#contact'>
+              <div className='rounded-full  bg-white text-black p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <AiOutlineMail />
+              </div>
+            </Link>
+            <Link href='/resume'>
+              <div className='rounded-full  bg-white text-black p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <BsFillPersonLinesFill />
+              </div>
+            </Link>
+          </div>
         </div>
-        <div className='h-1/2 md:h-full w-full flex items-center justify-center'>
-          <img src='h2.jpg' className='h-3/4 md:max-w-full md:max-h-full'/>
-        </div>
-        <svg
-          className="absolute bottom-0 left-1/2 transform-translate-x-1/2 mb-8 animate-bounce w-10 h-10 text-white cursor-pointer bg-slate-700/80 rounded-full p-2"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          onClick={handleClick}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
+        <Image src="/logo.png" className='w-72 md:w-96' width={400} height={400} alt='/' />
       </div>
-    </>
+      
+    </div>
   );
 };
 
-export default HeroSection;
+export default Hero;
