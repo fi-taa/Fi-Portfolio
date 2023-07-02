@@ -22,8 +22,8 @@ const Card = (props) => {
         ></div>
         <div className="px-6 py-4 bg-white">
           <div className="mb-2">
-            <h1 className="text-2xl font-bold text-blue-700 hover:font-serif">
-              <a href="/ProjectView">{props.title} &rarr;</a>
+            <h1 className="text-2xl font-bold text-blue-400 hover:font-serif">
+              <a href="/ProjectView/#projectView">{props.title} &rarr;</a>
             </h1>
           </div>
           {/* <p className="text-gray-700">Card Description</p> */}

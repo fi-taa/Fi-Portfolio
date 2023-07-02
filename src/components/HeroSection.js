@@ -14,12 +14,12 @@ const Hero = () => {
              BUILD TOGETHER
           </p>
           <h1 className='py-4 text-4xl font-bold'>
-            Hi, I&#39;m <span className='text-[#3f35ff] '> Fita</span>
+            Hi, I&#39;m <span className='text-blue-400 '> Fita</span>
           </h1>
-          <h1 className='py-2 font-serif text-blue-400'>A Front-End Web Developer</h1>
+          <h1 className='py-2 font-serif text-blue-400'>A Front-End Web Developer and Graphics Designer</h1>
           <p className='py-4  sm:max-w-[70%] m-auto font-thin'>
             I’m focused on building responsive front-end web applications
-            integrating back-end technologies.
+            integrating back-end technologies and passionated in doing graphics designing.
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4 '>
             <a
@@ -52,7 +52,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <Image src="/logo.png" className='w-72 md:w-96' width={400} height={400} alt='/' />
+        <Image src="/logo.png" className='w-56 md:w-96' width={400} height={400} alt='/' />
       </div>
       
     </div>

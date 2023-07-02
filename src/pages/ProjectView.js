@@ -1,3 +1,5 @@
+import Hero from "@/components/HeroSection";
+import NavBar from "@/components/NavBar";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -5,7 +7,7 @@ import { useState, useEffect } from "react";
 const projects = [
     {id:0,
     title: "Projects  🔻",
-    description:"Welcome to the Projects page for Frontend Developers! Explore a diverse collection of curated projects to enhance your skills and ignite your passion for frontend development. From responsive layouts to stunning visual effects, find endless possibilities to challenge and inspire you. Happy coding!",
+    description:" Welcome to the Projects page for Frontend Developers! Explore a diverse collection of curated projects to enhance your skills and ignite your passion for frontend development. From responsive layouts to stunning visual effects, find endless possibilities to challenge and inspire you. Happy coding!",
 website:"https://fitaa.vercel.app",
 github:"https://github.com/fi-taa"},
   {
@@ -66,31 +68,12 @@ const ProjectPreviewPage = () => {
   
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800">
-      <header className="flex items-center justify-between w-full px-4 py-3">
-        <Link href="/">
-            <img src="/h2.jpg" width={50} height={50} className="rounded drop-shadow-md hover:scale-125"/>
-        </Link>
-        <div className="flex items-center space-x-2">
-          <a
-            href="mailto:your-email@gmail.com"
-            className="text-gray-600 hover:text-blue-500"
-          >
-            Gmail
-          </a>
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-500"
-          >
-            GitHub
-          </a>
-        </div>
-      </header>
-      <main className="flex items-center justify-center flex-grow p-4">
+    <div className=" ">
+      <NavBar />
+      <Hero />
+      <main id="projectView" className="flex items-center justify-center flex-grow p-4">
         <div className="flex items-start space-x-8">
-        <ul className="space-y-4 border-2 p-5 rounded border-black/50 text-black ">
+        <ul className="space-y-4  text-black  p-2 text-sm h-[400px] border-b-2 overflow-y-auto">
             {projects.map((project) => (
               <li
                 key={project.id}
@@ -106,7 +89,7 @@ const ProjectPreviewPage = () => {
             ))}
           </ul>
           <div className="flex flex-col flex-grow">
-            <h2 className="text-2xl font-bold ">
+            <h2 className="text-2xl font-semibold text-blue-500">
               {selectedProject.title}
             </h2>
             <div
