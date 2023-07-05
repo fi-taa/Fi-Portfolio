@@ -3,7 +3,7 @@ import { FaLocationArrow, FaMobile,FaTelegram,FaMailBulk,FaMapMarked } from "rea
 
 
 
-function Contact() {
+function Contact({sectionRef}) {
 
     const [fullname, setFullname] = useState("");
     const [email, setEmail] = useState("");
@@ -15,7 +15,7 @@ function Contact() {
     }
 
   return (
-    <div id="contact" className="h-screen p-2 bg-white ">
+    <div id="contact" ref={sectionRef} className="h-screen p-2 bg-white ">
       <div className="flex flex-col justify-center items-center gap-3 rounded-lg bg-black text-white h-2/5">
         <div className="text-2xl font-bold">Contact me</div>
         <div className=" font-thin">
