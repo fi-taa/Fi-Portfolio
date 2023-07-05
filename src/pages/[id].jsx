@@ -3,8 +3,21 @@ import Tag from "../components/Tag";
 import { FaReact, FaCss3, FaHtml5 } from "react-icons/fa";
 import { SiNextDotJs, SiTailwindcss, siTailwindcss } from "react-icons/si";
 import Image from "next/image";
+import {useRouter} from 'next/router';
+import Web from '../data/web';
+import projects from '../data/Projects';
 
 export default function Detail() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const project = projects.find((project) => project.id === Number(id));
+
+  if (!project) {
+    // Handle the case when the project is not found
+    return <div>Project not found</div>;
+  }
+
   return (
     <>
       <div>
@@ -24,7 +37,7 @@ export default function Detail() {
               </div>
               <div className="md:mt-3">
                 <p className="text-gray-800 dark:text-white lg:text-4xl text-3xl font-extrabold leading-9">
-                  Rating Component
+                  {project.title}
                 </p>
               </div>
               <div className="md:mt-3">
@@ -45,7 +58,7 @@ export default function Detail() {
               </div>
             </div>
             <div className="flex justify-center items-center lg:w-2/5 mt-10 md:mt-0">
-              <img className="w-full" src="/Rate.png" alt="laptops" />
+              <img className="w-full" src={project.imageUrl} alt="laptops" />
             </div>
           </div>
           <div className="mx-auto container w-full flex xl:flex-row flex-col justify-between items-start mt-12 px-6 lg:px-0">
@@ -57,21 +70,14 @@ export default function Detail() {
               </div>
               <div className="mt-8">
                 <p className="text-gray-800 dark:text-white lg:text-base text-sm leading-normal">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  ornare ac eros congue ullamcorper. Fusce porta elementum
-                  euismod. Curabitur venenatis mollis bibendum. Proin porta
-                  imperdiet nunc ac semper. Nullam in eros non tellus malesuada
-                  lacinia sed id justo. Donec consectetur ut sapien dignissim
-                  faucibus. Aliquam volutpat fringilla magna at varius.
-                  Pellentesque tempor arcu quis ultricies auctor. Nam et
-                  imperdiet ligula, vel laoreet lectus. Praesent vel dui velit.
-                  Sed viverra scelerisque lacus nec dictum.
+                  
+                  {project.description}
                 </p>
               </div>
               <div className="mt-8 w-full">
                 <img
                   className="w-full"
-                  src="/Rate.png"
+                  src={project.imageUrl}
                   alt="rate"
                 />
               </div>
