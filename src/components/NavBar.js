@@ -42,7 +42,7 @@ function NavBar() {
               Home
             </a>
             <a
-              href="/about"
+              href="/AboutMe"
               className="block py-2 px-4 hover:scale-105 hover:text-black text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               About

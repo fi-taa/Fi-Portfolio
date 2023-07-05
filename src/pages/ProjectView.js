@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     title: "Rating Component",
-    imageUrl: "/rate.png",
+    imageUrl: "/Rate.png",
 
     description:
       "Discover our simple and intuitive Rating Page! Easily collect user feedback and ratings with a streamlined interface. Effortlessly gather valuable insights to improve your products or services. Start gathering feedback today and make informed decisions.",

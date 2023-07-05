@@ -71,7 +71,7 @@ export default function Detail() {
               <div className="mt-8 w-full">
                 <img
                   className="w-full"
-                  src="/rate.png"
+                  src="/Rate.png"
                   alt="rate"
                 />
               </div>
