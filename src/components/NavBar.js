@@ -43,7 +43,7 @@ function NavBar() {
         <div
           className={`${
             isMenuOpen ? "block absolute top-0 right-0 m-2 bg-white cursor-pointer" : "hidden"
-          } md:flex md:items-center md:w-auto`}
+          } md:flex md:items-center md:w-auto cursor-pointer`}
         >
           <div className="text-black  md:flex-grow">
             <Link
