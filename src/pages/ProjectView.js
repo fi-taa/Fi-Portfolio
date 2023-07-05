@@ -1,18 +1,13 @@
-import Hero from "@/components/HeroSection";
+import React, { useState, useEffect } from "react";
 import NavBar from "@/components/NavBar";
+import Hero from "@/components/HeroSection";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
-// Dummy project data
 const projects = [
-    {id:0,
-    title: "Projects  🔻",
-    description:" Welcome to the Projects page for Frontend Developers! Explore a diverse collection of curated projects to enhance your skills and ignite your passion for frontend development. From responsive layouts to stunning visual effects, find endless possibilities to challenge and inspire you. Happy coding!",
-website:"https://fitaa.vercel.app",
-github:"https://github.com/fi-taa"},
   {
     id: 1,
     title: "Fi-Portifolio",
+    imageUrl: "/logo.png",
     description:
       "Welcome to 'Fi-portfolio' - a showcase of my work! This project highlights my skills and expertise as a frontend developer. Explore a collection of meticulously crafted web pages, beautifully designed user interfaces, and seamlessly interactive features. Dive into the world of 'Fi-portfolio' and witness the blend of creativity, innovation, and technical prowess. Experience the power of modern web development brought to life through this unique project.",
     
@@ -22,6 +17,8 @@ github:"https://github.com/fi-taa"},
   {
     id: 2,
     title: "Rating Component",
+    imageUrl: "/rate.png",
+
     description:
       "Discover our simple and intuitive Rating Page! Easily collect user feedback and ratings with a streamlined interface. Effortlessly gather valuable insights to improve your products or services. Start gathering feedback today and make informed decisions.",
     website: "https://github.com/fi-taa/Rating/blob/master/src/components",
@@ -31,6 +28,8 @@ github:"https://github.com/fi-taa"},
   {
     id: 3,
     title: "Newsletter Component",
+    imageUrl: "/NewsLetter.png",
+
     description:
       "Introducing our Interactive Newsletter Component! Engage your audience with captivating newsletters that go beyond plain text. Seamlessly integrate interactive elements like videos, images, and interactive buttons to create a truly immersive experience. Boost reader engagement and drive meaningful interactions. Elevate your newsletters to the next level with our user-friendly component.",
     
@@ -50,80 +49,59 @@ const ProjectPreviewPage = () => {
 
   useEffect(() => {
     setRenderedDescription("");
-  
+
     let currentIndex = -1;
     const descriptionInterval = setInterval(() => {
-      if (currentIndex >= selectedProject.description.length-1) {
+      if (currentIndex >= selectedProject.description.length - 1) {
         clearInterval(descriptionInterval);
       } else {
         setRenderedDescription((prevDescription) => prevDescription + selectedProject.description[currentIndex]);
         currentIndex++;
       }
     }, 50);
-  
+
     return () => {
       clearInterval(descriptionInterval);
     };
   }, [selectedProject]);
-  
+
+  const truncateDescription = (description) => {
+    const words = description.split(" ");
+    if (words.length <= 15) {
+      return description;
+    }
+    return words.slice(0, 15).join(" ") + "...";
+  };
 
   return (
-    <div className=" ">
+    <div className="">
       <NavBar />
       <Hero />
-      <main id="projectView" className="flex items-center justify-center flex-grow p-4">
-        <div className="flex items-start space-x-8">
-        <ul className="space-y-4  text-black  p-2 text-sm h-[400px] border-b-2 overflow-y-auto">
-            {projects.map((project) => (
-              <li
-                key={project.id}
-                className={`p-2 rounded-md ${
-                  selectedProject.id === project.id
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 hover:bg-gray-300"
-                } cursor-pointer`}
-                onClick={() => handleProjectClick(project)}
-              >
-                {project.title}
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col flex-grow">
-            <h2 className="text-2xl font-semibold text-blue-500">
-              {selectedProject.title}
-            </h2>
+      <div className="bg-gray-100 min-h-screen p-8">
+        <h1 className="text-3xl font-bold mb-6">My Projects</h1>
+        <p>Welcome to the Projects page for Frontend Developers! Explore a diverse collection of curated projects to enhance your skills and ignite your passion for frontend development. From responsive layouts to stunning visual effects, find endless possibilities to challenge and inspire you. Happy coding!</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <div
-              className="flex-grow p-4 mt-4 max-h-96 overflow-y-auto bg-black text-white rounded-md shadow-md"
-              style={{ width: "100%", maxWidth: "400px" }}
-
+              key={project.id}
+              className="bg-white shadow-md p-6 rounded-md flex flex-col"
             >
-              {renderedDescription.split("\n").map((paragraph, index) => (
-                <p key={index} className="mb-4">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-            <div className="flex justify-center mt-4 space-x-2 text-sm sm:text-md">
-              <a
-                href={selectedProject.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600"
-              >
-                View Site
-              </a>
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 font-semibold text-white bg-gray-700 rounded-md hover:bg-gray-600"
-              >
-                GitHub
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="w-full h-40 object-cover mb-4 rounded-md"
+              />
+              <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+              <p className="text-gray-600 mb-4">
+                {truncateDescription(project.description)}
+              </p>
+              <a href="/Detail" className="bg-blue-500 text-white py-2 px-4 rounded-md self-end">
+                View Details
               </a>
             </div>
-          </div>
+          ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 };
