@@ -6,6 +6,8 @@ import Card from '@/components/WebCard'
 import ProjectPreviewPage from '@/pages/WebProjects'
 import NavBar from '@/components/NavBar'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
+import Slide from '@/components/Slide'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -14,10 +16,14 @@ export default function Home() {
 
   return (
     <div>
-      <NavBar sectionRef={sectionRef} />
       <HeroSection></HeroSection>
+      <div className='flex justify-center m-10'>
+      <Slide/>
+      </div>
+      <div className='flex justify-center'>
       <Card title="Web Development" />
       <Card2 title="Graphics Design" />
+      </div>
       <Contact  sectionRef={sectionRef}/>
     </div>
   )

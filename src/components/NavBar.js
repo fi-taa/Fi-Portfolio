@@ -46,48 +46,33 @@ function NavBar() {
           } md:flex md:items-center md:w-auto cursor-pointer`}
         >
           <div className="text-black  md:flex-grow">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
+            <a
+              href="/"
+             
               className="block py-2 px-4 hover:scale-105 hover:text-black text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               Home
-            </Link>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
+            </a>
+            <a
+              href="/AboutMe"
               className="block py-2 px-4 hover:scale-105 hover:text-black text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               About
-            </Link>
-            <Link
-              to="web-projects"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
+            </a>
+            <a
+              href="/WebProjects"
               className="block py-2 px-4 hover:scale-105 hover:text-black text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               Web Development
-            </Link>
-            <Link
-              to="graphics-projects"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
+            </a>
+            <a
+              href="/GraphicsProjects"
               className="block py-2 px-4 hover:scale-105 hover:text-black text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               Graphics Design
-            </Link>
+            </a>
             <Link
-              to="contact"
+              href="#contact"
               spy={true}
               smooth={true}
               offset={-70}

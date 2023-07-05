@@ -1,21 +1,18 @@
 import React from "react";
-import Tag from "../components/Tag";
-import { FaReact, FaCss3, FaHtml5 } from "react-icons/fa";
-import { SiNextDotJs, SiTailwindcss, siTailwindcss } from "react-icons/si";
+import Tag from "../../../components/Tag";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 import Image from "next/image";
-import {useRouter} from 'next/router';
-import Web from '../data/web';
-import projects from '../data/Projects';
+import { useRouter } from "next/router";
+import projects from "../../../data/web";
 
 export default function Detail() {
   const router = useRouter();
-  const { id } = router.query;
-
-  const project = projects.find((project) => project.id === Number(id));
-
+   const {id} = router.query;
+   const project = projects.find((project) => project.id === Number(id));
   if (!project) {
-    // Handle the case when the project is not found
-    return <div>Project not found</div>;
+    // Handle the case when the Graphics is not found
+    return <div>Graphics not found</div>;
   }
 
   return (
@@ -23,7 +20,7 @@ export default function Detail() {
       <div>
         <div className="dark:bg-gray-900 py-5">
           <a
-            href="./ProjectView"
+            href="/WebProjects"
             className="text-xl text-white m-3 hover:text-gray-500"
           >
             &larr; Back
@@ -70,16 +67,11 @@ export default function Detail() {
               </div>
               <div className="mt-8">
                 <p className="text-gray-800 dark:text-white lg:text-base text-sm leading-normal">
-                  
                   {project.description}
                 </p>
               </div>
               <div className="mt-8 w-full">
-                <img
-                  className="w-full"
-                  src={project.imageUrl}
-                  alt="rate"
-                />
+                <img className="w-full" src={project.imageUrl} alt="rate" />
               </div>
             </div>
           </div>

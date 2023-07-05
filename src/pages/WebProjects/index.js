@@ -10,8 +10,10 @@ const ProjectPreviewPage = () => {
   const router = useRouter();
 
   const handleDetail = (projectId) => {
-    router.push(`/${projectId}`);
+    router.push(`/WebProjects/detail/${projectId}`);
+
   };
+  
 
   const [selectedProject, setSelectedProject] = useState(Web[0]);
   const [renderedDescription, setRenderedDescription] = useState("");
@@ -48,7 +50,6 @@ const ProjectPreviewPage = () => {
 
   return (
     <div className="">
-      <NavBar />
       <Hero />
       <div className="bg-gray-100 min-h-screen p-8">
         <h1 className="text-3xl font-bold mb-6">My Projects</h1>
