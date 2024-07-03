@@ -25,30 +25,31 @@ function NavBar() {
     <div className="m-0 p-0 h-[12vh] bg-black">
       <nav className="flex justify-center items-center relative">
         <a href="/">
-          <div className="text-white m-5 font-light text-3xl overline">Fitaa</div>
+          <div className="text-white m-5 font-medium text-3xl overline">Fitaa</div>
         </a>
-        <div className="ml-auto mr-4">
+        {/* Hamburger menu icon */}
+        <div className="ml-auto mr-4 md:hidden">
           {isMenuOpen ? (
             <IoCloseOutline
-              className="text-white h-6 w-6 cursor-pointer md:hidden absolute top-0 right-0 m-2 z-10 hover:text-red-500 hover:scale-125"
+              className="text-white h-6 w-6 cursor-pointer hover:text-red-500 hover:scale-125"
               onClick={toggleMenu}
             />
           ) : (
             <GiHamburgerMenu
-              className="fill-white h-6 w-6 cursor-pointer md:hidden"
+              className="fill-white h-6 w-6 cursor-pointer"
               onClick={toggleMenu}
             />
           )}
         </div>
+        {/* Menu items */}
         <div
           className={`${
             isMenuOpen ? "block absolute top-0 right-0 m-2  cursor-pointer" : "hidden"
           } md:flex md:items-center md:w-auto cursor-pointer`}
         >
-          <div className="text-black  md:flex-grow">
+          <div className="text-black md:flex-grow">
             <a
               href="/"
-             
               className="block py-2 px-4 hover:scale-105 hover:text-white text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               Home
@@ -60,10 +61,10 @@ function NavBar() {
               About
             </a>
             <a
-              href="/WebProjects"
+              href="/Developments"
               className="block py-2 px-4 hover:scale-105 hover:text-white text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
-              Web Development
+              Software Development
             </a>
             <a
               href="/GraphicsProjects"
@@ -72,13 +73,13 @@ function NavBar() {
               Graphics Design
             </a>
             <a
-              href="/GraphicsProjects"
+              href="/MachineLearningProjects"
               className="block py-2 px-4 hover:scale-105 hover:text-white text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               Machine Learning
             </a>
             <a
-              href="/GraphicsProjects"
+              href="/UIDesignProjects"
               className="block py-2 px-4 hover:scale-105 hover:text-white text-gray-400 rounded md:inline-block md:mt-0 md:ml-4"
             >
               UI/UX Design

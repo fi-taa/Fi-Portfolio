@@ -32,6 +32,18 @@ const projects = [
       github: "https://github.com/fi-taa/Rating/blob/master/src/components/NewsLetter.jsx",
   
     },
+    {
+      id: 733,
+      title: "Goma Notify",
+      imageUrl: "/NewsLetter.png",
+      tag : "Flutter, Django",
+      description:
+        "Renew documents with Goma Notify! This flutter mobile app project offers a seamless solution for document renewal reminders. Never miss an important deadline again with our automated notification system. Stay organized and up-to-date with Goma Notify!",
+      
+      website: "https://github.com/fi-taa/Rating/blob/master/src/components/",
+      github: "https://github.com/fi-taa/Rating/blob/master/src/components/NewsLetter.jsx",
+  
+    },
   ];
 
   export default projects;

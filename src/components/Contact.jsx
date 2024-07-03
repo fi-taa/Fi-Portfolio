@@ -58,7 +58,7 @@ const ContactMe = ({sectionRef}) => {
                   
                   <li>
                     <a
-                      href="https://t.me.com/wecan_1"
+                      href="https://t.me.com/fita_wegene"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:underline"

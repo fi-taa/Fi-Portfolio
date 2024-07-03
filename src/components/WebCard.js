@@ -23,7 +23,7 @@ const WebCard = (props) => {
         <div className="absolute bottom-0 p-2 bg-white/70">
           <div className="mb-2">
             <h1 className="text-xl font-bold  hover:font-serif">
-              <a href="/WebProjects" className="text-gray-900 hover:text-blue-600">
+              <a href="/Developments" className="text-gray-900 hover:text-blue-600">
                 {props.title} &rarr;
               </a>
             </h1>

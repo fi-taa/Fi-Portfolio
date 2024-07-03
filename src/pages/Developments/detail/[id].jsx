@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import projects from "../../../data/web";
+import projects from "../../../data/developments";
 
 export default function Detail() {
   const router = useRouter();
@@ -20,7 +20,7 @@ export default function Detail() {
       <div>
         <div className="dark:bg-gray-900 py-5">
           <a
-            href="/WebProjects"
+            href="/Developments"
             className="text-xl text-white m-3 hover:text-gray-500"
           >
             &larr; Back
@@ -29,7 +29,7 @@ export default function Detail() {
             <div className="flex flex-col justify-start items-start lg:w-2/5 px-2 lg:px-0">
               <div>
                 <p className="lg:text-sm text-xs text-gray-600 dark:text-gray-300 font-medium leading-none">
-                  Fi-Portfolio
+                  Fita Wegene
                 </p>
               </div>
               <div className="md:mt-3">
@@ -39,8 +39,7 @@ export default function Detail() {
               </div>
               <div className="md:mt-3">
                 <p className="lg:text-base text-sm leading-normal text-gray-600 dark:text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  ornare ac eros congue ullamcorper. Fusce porta elementum
+                  {project.tag}  
                 </p>
               </div>
               <div className="flex gap-2 m-6">
@@ -54,7 +53,7 @@ export default function Detail() {
                 ></Image>
               </div>
             </div>
-            <div className="flex justify-center items-center lg:w-2/5 mt-10 md:mt-0">
+            <div className="flex justify-center items-center w-3/5 mt-10 md:mt-0">
               <img className="w-full" src={project.imageUrl} alt="laptops" />
             </div>
           </div>

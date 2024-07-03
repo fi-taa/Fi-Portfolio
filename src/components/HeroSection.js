@@ -11,19 +11,17 @@ const Hero = () => {
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center  flex-col-reverse sm:flex-row'>
         <div>
           <p className='uppercase text-sm tracking-widest font-extralight'>
-             BUILD TOGETHER
+          Let's build together
           </p>
           <h1 className='py-4 text-4xl font-bold'>
             Hi, I&#39;m <span className='text-blue-400 '> Fita</span>
           </h1>
-          <h1 className='py-2 font-serif text-blue-400'>A Front-End Web Developer and Graphics Designer</h1>
+          <h1 className='py-2 font-serif text-blue-400'>Multidisciplinary Developer and Designer</h1>
           <p className='py-4  sm:max-w-[70%] m-auto font-thin'>
-            I’m focused on building responsive front-end web applications
-            integrating back-end technologies and passionated in doing graphics designing.
-          </p>
+          I'm Machine Learning Engineer specializing in web and mobile app development, UI/UX design, and graphics design. I create innovative solutions by combining cutting-edge technology with user-centric design to deliver exceptional digital experiences. </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4 '>
             <a
-              href='https://t.me/wecan_1'
+              href='https://t.me/fita_wegene'
               target='_blank'
               rel='noreferrer'
             >

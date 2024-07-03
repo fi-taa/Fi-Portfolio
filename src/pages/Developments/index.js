@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/HeroSection";
 import Link from "next/link";
-import Web from "@/data/web";
+import Web from "@/data/developments";
 import Graphics from "@/data/graphics";
 import { useRouter } from "next/router";
 
@@ -10,7 +10,7 @@ const ProjectPreviewPage = () => {
   const router = useRouter();
 
   const handleDetail = (projectId) => {
-    router.push(`/WebProjects/detail/${projectId}`);
+    router.push(`/Developments/detail/${projectId}`);
 
   };
   
